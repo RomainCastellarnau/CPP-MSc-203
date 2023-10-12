@@ -62,7 +62,6 @@ int main(){
     cout << "Where epsilon_t is a white noise process \n";
     double c;
     double phi_1;
-    double mu;
     double sigma;
     int length;
     cout << "Please enter the value of c: \n";
