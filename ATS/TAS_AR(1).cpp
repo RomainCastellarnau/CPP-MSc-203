@@ -34,7 +34,7 @@ vector<double> white_noise_generator(double sigma, int length){
 }
 
 /* The function AR1 allow to generate an AR(1) process with a given c, phi_1 and white noise process 
-* and stores the values of the process in a vector. 
+* and stores the values of the process in a vector. X_t = c + phi_1 * X_t-1 + epsilon_t
 *
 * Takes as input:
 * - c (double): constant of the AR(1) process
