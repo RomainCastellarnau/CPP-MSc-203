@@ -38,7 +38,8 @@ vector<double> white_noise_generator(double sigma, int length){
 *
 * Takes as input:
 * - c (double): constant of the AR(1) process
-* - phi_1 (double): phi_1 of the AR(1) process 
+* - phi_1 (double): phi_1 of the AR(1) process
+* - white_noise (vector <double>): vector containing the value of the white noise process
 *
 * Returns: 
 * - AR1_process (vector <double>): vector containing the value of the AR(1) process
