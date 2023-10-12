@@ -79,4 +79,5 @@ int main(){
     for (int i = 0; i < my_AR1_process.size(); i++){
         cout << my_AR1_process[i] << '\n';
     }
+    return 0;
 }
