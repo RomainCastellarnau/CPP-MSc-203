@@ -1,0 +1,9 @@
+Here are the results for the written function f(x) = ln(x) + x:
+The provided values were: 100, 50, 10, 0
+Inputting those values in the function gave the following results:
+f(100) = -5.39483
+f(50) = -3.15904
+f(10) = -0.859693
+f(0) = -inf
+We used the Newton-Raphson algorithm to find the x values such that f(x) = 0
+We found that f(-34.8707) = 0
