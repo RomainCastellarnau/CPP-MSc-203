@@ -52,11 +52,7 @@ double find_min_vector_iterative(vector<double> uniform, int n){
 int main(){
 
     int n = 10000;
-    vector<double> time1; // time vector for the first recursive method
-    vector<double> time2; // time vector for the second recursive method
-    vector<double> time3; // time vector for the iterative method
-    vector<double> time4; // time vector for the built-in method
-    vector<double> timecomparison;
+    vector<double> time1 , time2 , time3 , time4 , timecomparison; // time vectors
 
     for (int i = 0 ; i < 10 ; i++){
         vector<double> uniform = uniform_generator(0, 100, n);
