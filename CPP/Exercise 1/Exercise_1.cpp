@@ -1,5 +1,5 @@
 /* ------------------------ Exercise 1 --------------------------
-* Parse the following text to retrieve options characteristic and 
+* Parse the following text to retrieve options characteristics and 
 * output a statement for every option as in the example below: 
 * • Input text:
 * In the index book options, there are
