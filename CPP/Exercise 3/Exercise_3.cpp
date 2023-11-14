@@ -115,7 +115,7 @@ int main()
     {
         // If the txt file is correctly opened clear the file content and write the results of the program
         outFile.clear();
-        outFile << "Results of the program for the function f(x) = ln(x) - sqrt(x) are as follows:" << endl;
+        outFile << "Results of the program for the function f(x) = ln(x) - sqrt(x) + 4 are as follows:" << endl;
 
         for (double x : input)
         {
