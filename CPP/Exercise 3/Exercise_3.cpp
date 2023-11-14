@@ -133,5 +133,7 @@ int main()
         }
     }
 
+    // Close the file
+    outFile.close();
     return 0;
 }
