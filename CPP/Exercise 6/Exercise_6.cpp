@@ -49,7 +49,6 @@ int main()
 
 vector<vector<int>> matrix_parser(ifstream &input)
 {
-
     string line;
     vector<vector<int>> result;
 
@@ -72,7 +71,6 @@ vector<vector<int>> matrix_parser(ifstream &input)
 
 void display_terminal(vector<vector<int>> data_matrix)
 {
-
     cout << "Below is the data contained in the exo6_data.csv file" << endl;
     for (int row = 0; row < data_matrix.size(); row++)
     {
