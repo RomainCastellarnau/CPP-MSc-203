@@ -1,0 +1,6 @@
+Results of the program for the function f(x) = ln(x) - sqrt(x) are as follows:
+f(5) = 3.37337
+f(10) = 3.14031
+f(15) = 2.83507
+We used the Newton-Raphson method to find the zero of the function f(x) = ln(x) - sqrt(x) + 4
+We found that f(67.4194) = 0
