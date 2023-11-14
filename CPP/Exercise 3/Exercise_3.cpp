@@ -5,9 +5,9 @@ Let us consider the real-valued function:
 
 Write a program that:
 
-    1. asks the  user to enter  as many  real numbers  as he wants.
+    1. Ask the  user to enter  as many  real numbers  as he wants.
     2. computes  and displays the value  of 𝑓on the  input  abscissa.
-    3. finds the  zero (or zeros)  of the  function  𝑓().
+    3. Find the  zero (or zeros)  of the  function  𝑓().
     4. outputs  results  to a file  stream.
 */
 
@@ -16,6 +16,13 @@ Write a program that:
 #include <cmath>
 #include <vector>
 #include <fstream>
+#if __cplusplus >= 201703L
+#include <filesystem>
+namespace fs = std::filesystem;
+#else
+#include <experimental/filesystem>
+namespace fs = std::experimental::filesystem;
+#endif
 
 using namespace std;
 
@@ -31,8 +38,8 @@ double f_prime(double x)
     return 1 / x - 1 / (2 * sqrt(x));
 }
 
-// Implementation of the Newton-Raphson method to find the zero of given real-valued function
-// If too many iterations are performed and no values is close to the threshold epsilon, the function returns an error message
+// Implementation of the Newton-Raphson method to find the zero of a given real-valued function
+// If too many iterations are performed and no values are close to the threshold epsilon, the function returns an error message
 double newton_raphson_method(double x_0)
 {
     double x_n = x_0; // initial guess for the root
@@ -61,20 +68,28 @@ double newton_raphson_method(double x_0)
 
 int main()
 {
-    vector<double> input = {};               // Real numbers inputed by the user
-    vector<double> results = {};             // Results of the function f(x) = ln(x) - sqrt(x) + 4 for each input
-    double root;                             // Solution of the equation f(x) = 0
-    double x;                                // Discrete input given by the user
-    ofstream outFile("function_output.txt"); //.txt file containing the output of our program
+    fs::path file_path = fs::path(__FILE__).parent_path() / "function_output.txt";
+    ofstream outFile(file_path); // Output file stream
+
+    // Check if the function_output.txt exists and if not, create such a file in the directory of the current file
+    if (!outFile)
+    {
+        outFile.open(file_path);
+    }
+
+    vector<double> input = {};   // Real numbers inputted by the user
+    vector<double> results = {}; // Results of the function f(x) = ln(x) - sqrt(x) + 4 for each input
+    double root;                 // Solution of the equation f(x) = 0
+    double x;                    // Discrete input given by the user
 
     cout << "Welcome to the Functional Analysis Program" << endl;
     cout << "This program will compute the value of the function f(x) = ln(x) - sqrt(x) for any real number x in R+" << endl;
     cout << "It will also find the zero of the function f(x) = ln(x) - sqrt(x) using the Newton-Raphson method" << endl;
-    cout << "Results of the program will be outputed to a .txt file called 'function_ouput.txt' located in the same directory" << endl;
+    cout << "Results of the program will be outputted to a .txt file called 'function_ouput.txt' located in the same directory" << endl;
     cout << "Please enter some values x for which you want to evaluate the function f()" << endl;
-    cout << "Enter -1 to stop inputing values" << endl;
+    cout << "Enter -1 to stop inputting values" << endl;
 
-    // Filling the vector input with the values inputed by the user
+    // Filling the vector input with the values inputted by the user
     do
     {
         cin >> x;
@@ -98,6 +113,8 @@ int main()
     // Outputing the results of the program to a .txt file
     if (outFile.is_open())
     {
+        // If the txt file is correctly opened clear the file content and write the results of the program
+        outFile.clear();
         outFile << "Results of the program for the function f(x) = ln(x) - sqrt(x) are as follows:" << endl;
 
         for (double x : input)
