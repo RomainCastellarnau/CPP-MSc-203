@@ -54,16 +54,31 @@ int main()
     vector<string> parameters_input = {};
     vector<string> parameters_name = {"Trade name: ", "Underlying reference: ", "Notional amount: ", "Currency: ", "Option type: ", "Maturity (Years): ", "Strike: "};
 
-    cout << "Welcome to the trade recap program!" << endl;
-    cout << "This program will ask you for the parameters of your trade and format a recap which wll be saved in a txt file in the same directory" << endl;
-    cout << "   1. A trade name;" << endl;
-    cout << "   2. An underlying reference (ticker);" << endl;
-    cout << "   3. A notional amount;" << endl;
-    cout << "   4. A currency;" << endl;
-    cout << "   5. An option type (Call/Put);" << endl;
-    cout << "   6. A Maturity;" << endl;
-    cout << "   7. A strike;" << endl;
-
+    cout << "\n";
+    cout << "Welcome to the trade recap program!"
+         << "\n";
+    cout << "\n";
+    cout << "This program will ask you for the several parameters of your trade a complete recap will be formatted and saved in a txt file in the same directory."
+         << "\n";
+    cout << "\n";
+    cout << "Here are the parameters required:"
+         << "\n";
+    cout << "\n";
+    cout << "   1. A trade name;"
+         << "\n";
+    cout << "   2. An underlying reference (ticker);"
+         << "\n";
+    cout << "   3. A notional amount;"
+         << "\n";
+    cout << "   4. A currency;"
+         << "\n";
+    cout << "   5. An option type (Call/Put);"
+         << "\n";
+    cout << "   6. A Maturity;"
+         << "\n";
+    cout << "   7. A strike;"
+         << "\n";
+    cout << "\n";
     // Ask the user for the trade parameters
     for (int i = 0; i < parameters_name.size(); i++)
     {
@@ -109,8 +124,9 @@ int main()
 
     // Format the output
     format_output(parameters_input, parameters_name, header_length);
-    cout << endl;
-    cout << "Your trade recap has been saved in the file 'trade_recap.txt' in the same directory." << endl;
+    cout << "\n";
+    cout << "Your trade recap has been saved in the file 'trade_recap.txt' in the same directory."
+         << "\n";
     return 0;
 }
 
@@ -136,10 +152,10 @@ void format_output(vector<string> parameters_input, vector<string> parameters_na
     output_file.clear();
 
     // Create the header
-    output_file << header << endl;
-    output_file << string(dash_header, '-') << " TRADE RECAP " << string(dash_header, '-') << endl;
-    output_file << header << endl;
-    output_file << string(header_length, ' ') << endl;
+    output_file << header << "\n";
+    output_file << string(dash_header, '-') << " TRADE RECAP " << string(dash_header, '-') << "\n";
+    output_file << header << "\n";
+    output_file << string(header_length, ' ') << "\n";
     // Use a flag to check if "Strike" has been already written
     bool strikeWritten = false;
     bool notionalWritten = false;
@@ -155,7 +171,7 @@ void format_output(vector<string> parameters_input, vector<string> parameters_na
 
             string formatted_strike = format_number(stod(parameters_input[i]));
             int dash_number_value = dash_number(parameters_name[i], formatted_strike, header_length);
-            output_file << parameters_name[i] << string(dash_number_value, '-') << " " << formatted_strike << endl;
+            output_file << parameters_name[i] << string(dash_number_value, '-') << " " << formatted_strike << "\n";
             strikeWritten = true;
         }
 
@@ -164,21 +180,22 @@ void format_output(vector<string> parameters_input, vector<string> parameters_na
         {
             string formatted_notional = format_number(stod(parameters_input[i]));
             int dash_number_value = dash_number(parameters_name[i], formatted_notional, header_length);
-            output_file << parameters_name[i] << string(dash_number_value, '-') << " " << formatted_notional << endl;
+            output_file << parameters_name[i] << string(dash_number_value, '-') << " " << formatted_notional << "\n";
             notionalWritten = true;
         }
 
         else if (parameters_name[i] == "Maturity (Years): ")
         {
             int dash_number_value = dash_number(parameters_name[i], parameters_input[i], header_length);
-            output_file << parameters_name[i] << string(dash_number_value - 1, '-') << " " << parameters_input[i] << "Y" << endl;
+            output_file << parameters_name[i] << string(dash_number_value - 1, '-') << " " << parameters_input[i] << "Y"
+                        << "\n";
         }
 
         // Else print the parameters as usual
         else
         {
             int dash_number_value = dash_number(parameters_name[i], parameters_input[i], header_length);
-            output_file << parameters_name[i] << string(dash_number_value, '-') << " " << parameters_input[i] << endl;
+            output_file << parameters_name[i] << string(dash_number_value, '-') << " " << parameters_input[i] << "\n";
         }
     }
     output_file.close();
