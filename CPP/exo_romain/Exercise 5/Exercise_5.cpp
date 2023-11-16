@@ -3,11 +3,11 @@
 
 Write a program that:
 
-    1. Prompts the user to enter one by one the digits of his/her phone number.
-    2. Ends the input by inputting ‘#’.
-    3. If a character other than a digit is inputted, prompt the user with a warning.
-    4. Sets up a control to avoid infinite loops.
-    5. Prints out the phone number to the screen in case of success.
+    1. Prompts the user to enter one by one the digits of his/her phone number;
+    2. Ends the input by inputting ‘#’;
+    3. If a character other than a digit is inputted, prompt the user with a warning;
+    4. Set up a control to avoid infinite loops;
+    5. Print out the phone number on the screen in case of success;
 
 */
 
