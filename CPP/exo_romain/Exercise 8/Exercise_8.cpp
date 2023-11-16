@@ -12,6 +12,7 @@ Example:
 If the user can enter the following text file path and string to look for:
 Path name: /Users/romaincastellarnau/Desktop/MSc. 203/M2/C++/Exercises/Exercise 8/my_example_text_file.txt
 String to look for: Hello
+
 */
 
 #include <iostream>
