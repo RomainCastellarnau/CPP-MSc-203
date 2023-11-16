@@ -2,9 +2,10 @@
 ------------------------------------------------------------------------------------------------------------------------
 Write a program that:
 
-    1. Takes as input (from user) two integers.
-    2. Computes their least common multiple (LCM) and greatest common divisor (GCD).
-    3. Displays the results.
+    1. Takes as input (from the user) two integers;
+    2. Computes their least common multiple (LCM) and greatest common divisor (GCD);
+    3. Displays the results;
+    
 */
 
 #include <iostream>
