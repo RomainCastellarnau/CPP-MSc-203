@@ -5,10 +5,11 @@ Let us consider the real-valued function:
 
 Write a program that:
 
-    1. Ask the  user to enter  as many  real numbers  as he wants.
-    2. computes  and displays the value  of 𝑓on the  input  abscissa.
-    3. Find the  zero (or zeros)  of the  function  𝑓().
-    4. outputs  results  to a file  stream.
+    1. Ask the  user to enter  as many  real numbers  as he wants;
+    2. computes  and displays the value  of 𝑓on the  input  abscissa;
+    3. Find the  zero (or zeros)  of the  function  𝑓();
+    4. outputs  results  to a file  stream;
+
 */
 
 #include <iostream>
