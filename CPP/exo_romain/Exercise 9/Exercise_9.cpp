@@ -3,6 +3,7 @@
 
 Write a small program that finds the position of the minimum of an array of decimal / double inputs.
 Enhance your program to perform a selection sort.
+
 */
 
 #include <iostream>
