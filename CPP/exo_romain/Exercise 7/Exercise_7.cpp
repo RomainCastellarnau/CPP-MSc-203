@@ -2,11 +2,11 @@
 ---------------------------------------------------------------------------------------------------------
 Write a program that :
 
-    1. Generates  n uniform  numbers  (in 0,1 ) where  n  is input  by the user
-    2. Compute the  minimum  of the sequence, and consider a recursive  and a non-recursive implementation.
-    3. Compare the  performance  of the  recursive and non-recursive approaches
-    4. Show empirically  that  this minimum  converges to 0 in probability
-    5. Prove it using probability theory.
+    1. Generates n uniform numbers (in 0,1 ) where n is input by the user;
+    2. Compute the minimum of the sequence, and consider a recursive and a non-recursive implementation;
+    3. Compare the performance of the recursive and non-recursive approaches;
+    4. Show empirically that this minimum converges to 0 in probability;
+    5. Prove it using probability theory;
 */
 
 #include <iostream>
