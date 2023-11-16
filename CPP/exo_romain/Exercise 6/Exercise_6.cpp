@@ -4,6 +4,7 @@ Write down a program that parses a CSV numerical matrix input:
 
     1. The input to be parsed looks like what is present in exo6_data.csv;
     2. Your code should parse this data, store it into a vector of vector (matrix-like format) and display it;
+    
 */
 
 #include <iostream>
