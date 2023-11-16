@@ -7,6 +7,7 @@ Write a program that :
     3. Compare the performance of the recursive and non-recursive approaches;
     4. Show empirically that this minimum converges to 0 in probability;
     5. Prove it using probability theory;
+    
 */
 
 #include <iostream>
