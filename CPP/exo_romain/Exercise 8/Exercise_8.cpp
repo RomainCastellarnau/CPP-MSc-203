@@ -2,12 +2,14 @@
 ---------------------------------------------------------------------------------------------------------
 Write a program that:
 
-    ▪ Asks the  user to enter  a text  file path
-    ▪ Asks the  user to enter  a string  to look for
-    ▪ Returns  the  number  of occurrences  as well as the position (in line and column
-    format)  of all occurrences
+    1. Asks the user to enter a text file path;
+    2. Asks the user to enter a string to look for;
+    3. Returns the number of occurrences as well as the position (in line and column format) of all occurrences;
 
-Example: If the  user  can enter  the  following  text  file  path  and  string  to  look  for:
+---------------------------------------------------------------------------------------------------------
+Example:
+
+If the user can enter the following text file path and string to look for:
 Path name: /Users/romaincastellarnau/Desktop/MSc. 203/M2/C++/Exercises/Exercise 8/my_example_text_file.txt
 String to look for: Hello
 */
