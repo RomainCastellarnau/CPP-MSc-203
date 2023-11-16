@@ -1,10 +1,10 @@
 /* Exercise 10
 ------------------------------------------------------------------------------------------------------------
 
-Write a program that  parses the  responses of the students  to a test.
-Checks it against the  correct response (provided in the  first row of the file).
+Write a program that parses the responses of the students to a test.
+Checks it against the correct response (provided in the first row of the file).
 If the response is correct, the student receives +1, if it is not correct then the score is decremented (-1).
-If no response, the  student is given 0 mark for the specific question.
+If no response, the student is given the mark 0 for the specific question.
 
 Your program should display results for each student (by increasing name) in the following format:
 « Student a received b mark. His grade is c. He is ranked d. »
@@ -43,7 +43,7 @@ using namespace std;
 
 vector<string> test_score(string line);                                                  // Function to parse the txt file containing the name of the student and their answers to the test.
 int scoring(vector<string> correct_answer, vector<string> student_answer);               // Function to compute the score of the student.
-vector<pair<string, double>> sort_alphabetical(vector<pair<string, double>> test_recap); // Function to sort the vector test recap in alphabetical ascending order the student names.
+vector<pair<string, double>> sort_alphabetical(vector<pair<string, double>> test_recap); // Function to sort the vector test recap in alphabetically ascending order the student names.
 char grade(int student_score, vector<string> correct_answer);                            // Function to compute the grade of the student based on his / her score.
 vector<double> selection_sort(vector<pair<string, double>> test_recap);                  // Function to sort the vector test recap in descending order of the student scores.
 int student_rank(vector<double> scores_sorted, double student_score);                    // Function to compute the rank of the student based on his / her score.
@@ -78,7 +78,7 @@ int main()
     // Close the input txt file
     inFile.close();
 
-    // Creation of the vector containing for each student the pair (student_name , test_score).
+    // Creation of the vector containing for each student the pair (student_name, test_score).
     vector<pair<string, double>> test_recap = {};
     for (int i = 0; i < students_answers.size(); i++)
     {
@@ -130,7 +130,7 @@ vector<string> test_score(string line)
 int scoring(vector<string> correct_answer, vector<string> student_answer)
 {
     int student_score = 0;
-    // Starting at index 1, index 0 contains the student name.
+    // Starting at index 1, index 0 contains the student's name.
     for (int i = 1; i < correct_answer.size(); i++)
     {
         if (correct_answer[i] == student_answer[i])
@@ -156,7 +156,7 @@ vector<pair<string, double>> sort_alphabetical(vector<pair<string, double>> test
     return test_recap;
 }
 
-char grade(double student_score, vector<string> correct_answer)
+char grade(int student_score, vector<string> correct_answer)
 {
     double score = student_score / static_cast<double>(correct_answer.size() - 1);
     char grade = ' ';
