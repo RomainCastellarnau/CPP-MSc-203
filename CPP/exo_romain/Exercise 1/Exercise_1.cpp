@@ -1,14 +1,17 @@
-/* ------------------------ Exercise 1 --------------------------
-* Parse the following text to retrieve options characteristics and 
-* output a statement for every option as in the example below: 
-* • Input text:
-* In the index book options, there are
-* 25M C/SX5E/20221223/100 
-* -25M C/SX5E/20220321/100 
-* 40M C/SX5E/20220921/90
-* -20M P/SPX/20220921/90
-* • Output (sample):
-* A long position for 25M of a call option on SX5E of maturity Dec 2022 and strike 100.
+/* Exercise 1
+----------------------------------------------------------------------------------------------------------------------------
+Parse the following text to retrieve option characteristics and output a statement for every option as in the example below: 
+
+• Input text:
+    In the index book options, there are
+    25M C/SX5E/20221223/100 
+    -25M C/SX5E/20220321/100 
+    40M C/SX5E/20220921/90
+    -20M P/SPX/20220921/90
+    
+• Output (sample):
+    A long position for 25M of a call option on SX5E of maturity Dec 2022 and strike 100.
+
 */
 
 #include <iostream>
